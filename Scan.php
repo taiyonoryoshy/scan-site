@@ -1,6 +1,20 @@
 <?php
 
-class Model_Scan_Scan extends Model_Scan_Uris_Uris {
+defined('SCAN_SITE_PATH') || define('SCAN_SITE_PATH', realpath(dirname(__FILE__)));
+
+set_include_path(implode(PATH_SEPARATOR, array(
+	get_include_path(),
+	SCAN_SITE_PATH . "/library"
+)));
+
+require_once(SCAN_SITE_PATH . "/library/Zend/Http/Client.php");
+require_once(SCAN_SITE_PATH . "/library/idna_convert/idna_convert.class.php");
+require_once(SCAN_SITE_PATH . "/Uris/Uris.php");
+require_once(SCAN_SITE_PATH . "/Uris/Canonization.php");
+require_once(SCAN_SITE_PATH . "/Uris/Filter.php");
+require_once(SCAN_SITE_PATH . "/Uris/Encoding.php");
+
+class ScanSite_Scan extends ScanSite_Uris_Uris {
 
 	const XHTML_NS = "http://www.w3.org/1999/xhtml";
 	const ERROR_PARSE = "Error parse xml";
@@ -14,7 +28,7 @@ class Model_Scan_Scan extends Model_Scan_Uris_Uris {
 
 	public function __construct($uri) {
 
-		$this->_encoding = new Model_Scan_Uris_Encoding();
+		$this->_encoding = new ScanSite_Uris_Encoding();
 
 		$this->_uri = $this->_encoding->encoding(trim($uri));
 
@@ -22,11 +36,11 @@ class Model_Scan_Scan extends Model_Scan_Uris_Uris {
 		$this->_parseTargetUri = parse_url($this->_targetUri);
 		$this->_targetHost = $this->_parseTargetUri['host'];
 
-		$canonization = new Model_Scan_Uris_Canonization();
+		$canonization = new ScanSite_Uris_Canonization();
 		$canonization->setTargetUri($this->_targetUri);
 		$this->_canonization = $canonization;
 
-		$filter = new Model_Scan_Uris_Filter();
+		$filter = new ScanSite_Uris_Filter();
 		$filter->setTargetHost($this->_targetHost);
 		$this->_filter = $filter;
 	}

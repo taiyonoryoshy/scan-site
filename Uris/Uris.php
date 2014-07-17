@@ -1,6 +1,6 @@
 <?php
 
-class Model_Scan_Uris_Uris {
+class ScanSite_Uris_Uris {
 
 	const ENCODING = 'UTF-8';
 
