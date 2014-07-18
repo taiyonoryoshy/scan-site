@@ -261,7 +261,6 @@ class Scan extends Uris_Uris {
 				$result[$i]['selects'] = $arr3;
 			}
 		}
-		
 		return $result;
 	}
 
