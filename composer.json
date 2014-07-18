@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "zf1/zend-loader": "dev-master",
+        "zf1/zend-loader": "1.12.6",
         "zf1/zend-registry": "dev-master",
         "zf1/zend-uri": "dev-master",
         "zf1/zend-http": "dev-master",
