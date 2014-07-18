@@ -1,5 +1,17 @@
 <?php
 
+set_include_path(implode(PATH_SEPARATOR, array(
+	VENDOR_PATH . "/zf1/zend-cache/library",
+	VENDOR_PATH . "/zf1/zend-exception/library",
+	VENDOR_PATH . "/zf1/zend-http/library",
+	VENDOR_PATH . "/zf1/zend-loader/library",
+	VENDOR_PATH . "/zf1/zend-locale/library",
+	VENDOR_PATH . "/zf1/zend-registry/library",
+	VENDOR_PATH . "/zf1/zend-uri/library",
+	VENDOR_PATH . "/zf1/zend-validate/library",
+	VENDOR_PATH . "/zf1/zend-xml/library"
+)));
+
 class Scan extends Uris_Uris {
 
 	const XHTML_NS = "http://www.w3.org/1999/xhtml";
