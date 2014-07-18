@@ -34,7 +34,7 @@ class Uris_Uris {
 	}
 
 	protected function _getIdnEncodeHost($host) {
-		$idn = new idna_convert(array('idn_version' => 2008));
+		$idn = new IdnaConvert(array('idn_version' => 2008));
 		$idnHost = $idn->encode($host);
 		return $idnHost;
 	}
