@@ -1,14 +1,6 @@
 <?php
 
-defined('SCAN_SITE_PATH') || define('SCAN_SITE_PATH', realpath(dirname(__FILE__)));
-
-
-require_once(SCAN_SITE_PATH . "/Uris/Uris.php");
-require_once(SCAN_SITE_PATH . "/Uris/Canonization.php");
-require_once(SCAN_SITE_PATH . "/Uris/Filter.php");
-require_once(SCAN_SITE_PATH . "/Uris/Encoding.php");
-
-class ScanSite_Scan extends ScanSite_Uris_Uris {
+class Scan extends Uris_Uris {
 
 	const XHTML_NS = "http://www.w3.org/1999/xhtml";
 	const ERROR_PARSE = "Error parse xml";
@@ -22,7 +14,7 @@ class ScanSite_Scan extends ScanSite_Uris_Uris {
 
 	public function __construct($uri) {
 
-		$this->_encoding = new ScanSite_Uris_Encoding();
+		$this->_encoding = new Uris_Encoding();
 
 		$this->_uri = $this->_encoding->encoding(trim($uri));
 
@@ -30,11 +22,11 @@ class ScanSite_Scan extends ScanSite_Uris_Uris {
 		$this->_parseTargetUri = parse_url($this->_targetUri);
 		$this->_targetHost = $this->_parseTargetUri['host'];
 
-		$canonization = new ScanSite_Uris_Canonization();
+		$canonization = new Uris_Canonization();
 		$canonization->setTargetUri($this->_targetUri);
 		$this->_canonization = $canonization;
 
-		$filter = new ScanSite_Uris_Filter();
+		$filter = new Uris_Filter();
 		$filter->setTargetHost($this->_targetHost);
 		$this->_filter = $filter;
 	}

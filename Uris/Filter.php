@@ -1,6 +1,6 @@
 <?php
 
-class ScanSite_Uris_Filter extends ScanSite_Uris_Uris
+class Uris_Filter extends Uris_Uris
 {
 
 	private $_parseUri;

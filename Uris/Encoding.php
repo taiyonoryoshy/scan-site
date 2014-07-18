@@ -1,6 +1,6 @@
 <?php
 
-class ScanSite_Uris_Encoding extends ScanSite_Uris_Uris
+class Uris_Encoding extends Uris_Uris
 {
 
 	public function encoding($uri)

@@ -1,6 +1,6 @@
 <?php
 
-class ScanSite_Uris_Canonization extends ScanSite_Uris_Uris {
+class Uris_Canonization extends Uris_Uris {
 
 	private $_uri;
 	private $_currentUri;
