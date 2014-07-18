@@ -23,5 +23,16 @@
         "psr-0": {
             "": ""
         }
-    }
+    },
+    "include-path": [
+        "../zf1/zend-cache/library",
+        "../zf1/zend-exception/library",
+        "../zf1/zend-http/library",
+        "../zf1/zend-loader/library",
+        "../zf1/zend-locale/library",
+        "../zf1/zend-registry/library",
+        "../zf1/zend-uri/library",
+        "../zf1/zend-validate/library",
+        "../zf1/zend-xml/library"
+    ]
 }
