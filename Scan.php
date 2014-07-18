@@ -2,13 +2,7 @@
 
 defined('SCAN_SITE_PATH') || define('SCAN_SITE_PATH', realpath(dirname(__FILE__)));
 
-set_include_path(implode(PATH_SEPARATOR, array(
-	get_include_path(),
-	SCAN_SITE_PATH . "/library"
-)));
 
-require_once(SCAN_SITE_PATH . "/library/Zend/Http/Client.php");
-require_once(SCAN_SITE_PATH . "/library/idna_convert/idna_convert.class.php");
 require_once(SCAN_SITE_PATH . "/Uris/Uris.php");
 require_once(SCAN_SITE_PATH . "/Uris/Canonization.php");
 require_once(SCAN_SITE_PATH . "/Uris/Filter.php");
