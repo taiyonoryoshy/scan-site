@@ -14,14 +14,20 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "zf1/zend-loader": "dev-master",
         "zf1/zend-exception": "dev-master",
+        "zf1/zend-loader": "dev-master",
         "zf1/zend-registry": "dev-master",
-        "zf1/zend-http": "dev-master",
         "zf1/zend-uri": "dev-master",
+        "zf1/zend-http": "dev-master",
         "zf1/zend-validate": "dev-master",
         "etechnika/idna-convert": "1.0.*"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/zf1/zend-loader"
+        }
+    ],
     "autoload": {
         "psr-0": {
             "": ""
