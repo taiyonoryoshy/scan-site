@@ -3,7 +3,7 @@ Scan site
 
 This library requires PHP extensions: tidy, mbstring.
 
-Preparation of internal site links and form elements.
+Scaning site. Getting home links. Getting home elements of forms.
 
 
 Usage

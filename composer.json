@@ -1,8 +1,25 @@
 {
-    "name": "taiyonoryoshy/scan-site",
+    "name": "scan-site/scan-site",
+    "type": "library",
+    "description": "Scaning site. Getting home links. Getting home elements of forms.",
+    "keywords": ["scan", "links", "elements of forms"],
+    "homepage": "https://github.com/Taiyonoryoshy/scan-site",
     "version": "1.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kirill Parasotchenko",
+            "email": "taiyonoryoshy@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=5.3.0",
+        "zf1/zend-loader": "dev-master",
+        "zf1/zend-exception": "dev-master",
+        "zf1/zend-registry": "dev-master",
+        "zf1/zend-http": "dev-master",
+        "zf1/zend-uri": "dev-master",
+        "zf1/zend-validate": "dev-master",
         "etechnika/idna-convert": "1.0.*"
     },
     "autoload": {
