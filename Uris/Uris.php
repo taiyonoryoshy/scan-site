@@ -1,5 +1,7 @@
 <?php
 
+use Etechnika\IdnaConvert\IdnaConvert as IdnaConvert;
+
 class Uris_Uris {
 
 	const ENCODING = 'UTF-8';
@@ -34,9 +36,7 @@ class Uris_Uris {
 	}
 
 	protected function _getIdnEncodeHost($host) {
-		$idn = new IdnaConvert(array('idn_version' => 2008));
-		$idnHost = $idn->encode($host);
-		return $idnHost;
+		return IdnaConvert::encodeString($host);
 	}
 
 	protected function _clearArrayOfEmptyElements($array) {
