@@ -14,7 +14,6 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "zf1/zend-loader": "1.12.6",
         "zf1/zend-registry": "1.12.4",
         "zf1/zend-uri": "1.12.4",
         "zf1/zend-http": "1.12.4",
