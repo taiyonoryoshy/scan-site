@@ -9,7 +9,9 @@ Scaning site. Getting home links. Getting home elements of forms.
 Installation
 ==============
 The recommended way to install scan-site is through Composer. Just create a composer.json file and run the php composer.phar install command to install it:
+
 .. code-block:: json
+
 {
     "require": {
         "scan-site/scan-site":"dev-master"
@@ -19,7 +21,9 @@ The recommended way to install scan-site is through Composer. Just create a comp
 
 Usage
 =======
+
 .. code-block:: php
+
 require_once(__DIR__ . '/vendor/autoload.php');
 
 defined('VENDOR_PATH') || define('VENDOR_PATH', (getenv('VENDOR_PATH') ? getenv('VENDOR_PATH') : __DIR__ . "/vendor"));
