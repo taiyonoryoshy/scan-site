@@ -1,9 +1,9 @@
 Scan site
 ===========
 
-This library requires PHP extensions: tidy, mbstring.
-
 Scaning site. Getting home links. Getting home elements of forms.
+
+This library requires PHP extensions: tidy, mbstring.
 
 
 Installation
