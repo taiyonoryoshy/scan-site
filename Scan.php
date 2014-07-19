@@ -12,6 +12,7 @@ set_include_path(implode(PATH_SEPARATOR, array(
 	VENDOR_PATH . "/zf1/zend-xml/library"
 )));
 
+
 class Scan extends Uris_Uris {
 
 	const XHTML_NS = "http://www.w3.org/1999/xhtml";
