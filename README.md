@@ -6,12 +6,24 @@ This library requires PHP extensions: tidy, mbstring.
 Scaning site. Getting home links. Getting home elements of forms.
 
 
+Installation
+==============
+The recommended way to install scan-site is through Composer. Just create a composer.json file and run the php composer.phar install command to install it:
+{
+    "require": {
+        "scan-site/scan-site":"dev-master"
+    }
+}
+
+
 Usage
 =======
 
-require_once("Scan.php");
+require_once(__DIR__ . '/vendor/autoload.php');
 
-$scan = new ScanSite_Scan("http://site.com");
+defined('VENDOR_PATH') || define('VENDOR_PATH', (getenv('VENDOR_PATH') ? getenv('VENDOR_PATH') : __DIR__ . "/vendor"));
+
+$scan = new Scan("http://site.com");
 
 $result = $scan->scan();
 
